@@ -1,0 +1,248 @@
+/* =========================================
+   RESET Y BASE
+========================================= */
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif; /* Fuente unificada con el ecosistema NEXTIC */
+    background: #f8f9fa; /* Fondo sutilmente más limpio */
+    margin: 0;
+    color: #333;
+}
+
+/* =========================================
+   CONTENEDOR GENERAL
+========================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 40px; /* Margen inferior para que no quede pegado al final */
+}
+
+/* TÍTULOS */
+.titulo-seccion {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.intro {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   BÚSQUEDA
+========================================= */
+.busqueda {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.busqueda input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+}
+
+.busqueda input:focus {
+    border-color: #f1c40f;
+}
+
+.busqueda button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.busqueda button:hover {
+    background: #f1c40f;
+    color: black;
+}
+
+/* =========================================
+   FEED Y TARJETAS (CHAMBITAS)
+========================================= */
+.feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.chambita {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.25s;
+    border: 1px solid #eee;
+}
+
+.chambita:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* IMÁGENES */
+.imagen_chambita {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background: #f4f4f4;
+}
+
+.imagen_chambita img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXTO DE TARJETAS */
+.chambita h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #111;
+}
+
+.descripcion {
+    color: #555;
+    font-size: 14px;
+}
+
+.servicio {
+    font-size: 13px;
+    color: #888;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+}
+
+.fecha {
+    font-size: 12px;
+    color: #888;
+}
+
+.ubicacion {
+    font-size: 13px;
+}
+
+.ubicacion a {
+    text-decoration: none;
+    color: #555;
+}
+
+.ubicacion a:hover {
+    text-decoration: underline;
+    color: #f1c40f;
+}
+
+/* BOTONES DE TARJETAS */
+.boton {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: auto; /* Esto siempre empuja el botón hasta abajo */
+    font-weight: 600;
+    transition: 0.2s;
+    border: 1px solid #eee;
+}
+
+.boton:hover {
+    background: #FFD700;
+    color: black;
+    border-color: #FFD700;
+}
+
+/* EFECTO OVERLAY (Hover sobre imagen) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.imagen_chambita:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .ver {
+    background: #f1c40f;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
+.volver-btn,
+.volver-btn:link,
+.volver-btn:visited {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (min-width: 769px) {
+    .volver-btn {
+        background: none;
+        padding: 0;
+        font-size: 16px;
+    }
+    
+    .volver-btn:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 92%; /* Da respiro a los bordes en el celular */
+        padding-top: 20px;
+    }
+    
+    .volver-btn {
+        background: #111;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-size: 15px;
+        display: inline-block;
+    }
+
+    .busqueda {
+        flex-direction: column; /* Apila el input y el botón en móviles */
+    }
+}
