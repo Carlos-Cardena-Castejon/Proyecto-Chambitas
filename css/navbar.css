@@ -1,0 +1,152 @@
+/* ===================== NAVBAR REUTILIZABLE ===================== */
+.navbar {
+  background: #000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 95%;
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+  position: relative; /* Necesario para que los badges floten encima del icono */
+}
+
+.menu a:hover {
+  background: #f1c40f; 
+  color: #000;
+}
+
+.menu a.publicar {
+  background: #f1c40f; 
+  color: #000; 
+  font-weight: bold;
+}
+
+.menu a.publicar:hover {
+  background: #fff;
+}
+
+.logout-link {
+  color: #888; 
+  display: flex; 
+  align-items: center; 
+  transition: 0.2s;
+}
+
+.logout-link:hover {
+  color: #ff4d4d;
+}
+
+.hamburger {
+  display: none; 
+  font-size: 22px; 
+  color: #fff; 
+  cursor: pointer;
+}
+
+/* ===================== BADGES Y NOTIFICACIONES ===================== */
+.badge {
+  background: #e74c3c; 
+  color: #fff; 
+  font-size: 10px; 
+  padding: 2px 6px; 
+  border-radius: 12px;
+}
+
+.badge-notif, .badge-red {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4b4b;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 2px solid #000; /* Borde oscuro para que contraste con la navbar negra */
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Animación si hay notificaciones nuevas */
+@keyframes bell-ring {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(15deg); }
+  20% { transform: rotate(-15deg); }
+  30% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  100% { transform: rotate(0); }
+}
+
+.notif-link:hover i {
+  animation: bell-ring 0.5s ease;
+}
+
+/* ===================== RESPONSIVE MÓVIL ===================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .menu {
+    display: none; 
+    flex-direction: column; 
+    width: 100%; 
+    gap: 10px; 
+    margin-top: 10px;
+    background: #000; /* Asegura que el menú móvil no sea transparente */
+    padding-bottom: 15px;
+  }
+  
+  .menu.active {
+    display: flex;
+  }
+  
+  .menu a {
+    justify-content: center; 
+    padding: 10px; 
+    font-size: 15px;
+  }
+
+  /* Ajuste de badges en móvil para que se alineen bien con el texto */
+  .badge-notif, .badge-red {
+    position: static;
+    margin-left: 8px;
+  }
+}

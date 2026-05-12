@@ -1,0 +1,434 @@
+/* ======================
+RESET
+====================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f4f4f4;
+color:#333;
+line-height:1.6;
+}
+
+/* ======================
+LAYOUT PRINCIPAL
+====================== */
+
+.main-container{
+max-width:1100px;
+margin:40px auto;
+padding:0 15px;
+
+display:grid;
+grid-template-columns:1fr 300px;
+gap:25px;
+}
+
+
+/* ======================
+PROFILE CARD
+====================== */
+
+.profile-card{
+grid-column:1 / -1;
+
+background:white;
+
+padding:30px;
+
+border-radius:14px;
+
+display:flex;
+align-items:center;
+gap:30px;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+.avatar-wrapper{
+text-align:center;
+}
+
+.avatar-wrapper img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #f1c40f;
+margin-bottom:10px;
+}
+
+.avatar-wrapper input{
+font-size:12px;
+margin-top:5px;
+}
+
+.avatar-wrapper button{
+margin-top:5px;
+background:#000;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:6px;
+cursor:pointer;
+font-size:12px;
+}
+
+.avatar-wrapper button:hover{
+background:#f1c40f;
+color:#000;
+}
+
+
+/* ======================
+INFO HEADER
+====================== */
+
+.info-header h1{
+font-size:22px;
+margin:6px 0;
+}
+
+.user-tag{
+font-size:11px;
+letter-spacing:1px;
+background:#f3f3f3;
+padding:4px 10px;
+border-radius:20px;
+font-weight:700;
+color:#666;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:10px;
+}
+
+.contact-item{
+font-size:13px;
+color:#777;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.contact-item i{
+color:#f1c40f;
+}
+
+
+/* ======================
+CONTENT BOX
+====================== */
+
+.content-box{
+background:white;
+border-radius:14px;
+padding:22px;
+margin-bottom:20px;
+box-shadow:0 5px 18px rgba(0,0,0,0.05);
+}
+
+.content-box h2{
+font-size:16px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.content-box ul{
+list-style:none;
+}
+
+.content-box li{
+margin-bottom:8px;
+}
+
+.content-box a{
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+.content-box a:hover{
+color:#f1c40f;
+}
+
+.empty-text{
+color:#888;
+font-style:italic;
+font-size:14px;
+}
+
+
+/* Lógica Visual de "Mostrar Más/Menos" */
+        .descripcion-texto {
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+            transition: all 0.3s ease;
+            
+            /* LA MAGIA ANTI-TEXTOS GIGANTES SIN ESPACIOS */
+            word-wrap: break-word; 
+            overflow-wrap: break-word;
+            word-break: break-all; /* Obliga a romper la palabra si choca con el borde */
+        }
+
+        /* ======================
+SIDEBAR (RESTAURADO)
+====================== */
+
+.sidebar{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    height:fit-content;
+    box-shadow:0 5px 18px rgba(0,0,0,0.05);
+}
+
+.sidebar h3{
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.nav-list{
+    list-style:none;
+}
+
+.nav-list li{
+    margin-bottom:12px;
+}
+
+/* BOTONES DE GESTIÓN DE PERFIL */
+.btn-action{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 14px;
+    background:#f9f9f9;
+    border-radius:10px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    font-size:14px;
+    transition:.2s;
+}
+
+.btn-action:hover{
+    background:#f1c40f;
+    color:black;
+}
+
+/* BOTÓN ESPECÍFICO DE EDITAR PERFIL */
+.btn-edit{
+    background:#f1c40f;
+    color:black;
+    justify-content:center;
+    font-weight:700;
+}
+
+
+/* =========================================
+   ESTILOS BASE - PERFIL NEXTIC
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================================
+   LAYOUT PRINCIPAL
+   ========================================= */
+.main-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 25px;
+}
+
+/* =========================================
+   TARJETAS Y CONTENEDORES (CONTENT BOX)
+   ========================================= */
+.profile-card, .content-box, .sidebar {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.profile-card {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.content-box {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   AVATAR Y FOTO
+   ========================================= */
+.avatar-wrapper img, .imagen-wrapper img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f1c40f;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.avatar-edit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    background: #fcfcfc;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px dashed #ddd;
+}
+
+/* =========================================
+   FORMULARIOS DE EDICIÓN
+   ========================================= */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 13px;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #f1c40f;
+    outline: none;
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.2);
+}
+
+/* CAMPOS BLOQUEADOS (CURP/Correo) */
+.readonly-field {
+    background-color: #f0f0f0 !important;
+    color: #888 !important;
+    cursor: not-allowed;
+    border-color: #ddd !important;
+}
+
+.char-counter {
+    font-size: 11px;
+    text-align: right;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* =========================================
+   BOTONES Y ACCIONES
+   ========================================= */
+.btn-action, .btn-edit, .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-edit, .boton {
+    background: #f1c40f;
+    color: black;
+}
+
+.btn-edit:hover, .boton:hover {
+    background: #000;
+    color: white;
+}
+
+.btn-cancelar {
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-cancelar:hover {
+    color: #e74c3c;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+}
