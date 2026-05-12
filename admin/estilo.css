@@ -1,0 +1,13 @@
+.boton_finalizar{
+background:#27ae60;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.boton_finalizar:hover{
+background:#219150;
+}
