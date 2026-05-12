@@ -1,0 +1,82 @@
+# Chambitas
+
+Chambitas es una plataforma web diseñada para conectar personas que necesitan un servicio con trabajadores que buscan generar ingresos adicionales.
+
+##  Descripción
+
+La aplicación permite a los usuarios publicar solicitudes de trabajo (chambitas) y a otros usuarios enviar propuestas para realizarlas. Incluye un sistema de negociación, gestión de acuerdos y evaluación de resultados.
+
+##  Problema que resuelve
+
+Facilita la conexión entre personas que necesitan servicios específicos y trabajadores disponibles, permitiendo acuerdos más organizados, seguros y con seguimiento dentro de la plataforma.
+
+##  Tecnologías utilizadas
+
+- PHP
+- MySQL
+- HTML5, CSS3, JavaScript
+- XAMPP (entorno de desarrollo)
+
+##  Funcionalidades principales
+
+###  Gestión de usuarios
+- Registro con validación de CURP y correo único
+- Encriptación de contraseñas
+- Restricción de nombres inapropiados
+
+###  Autenticación
+- Inicio de sesión con control de acceso
+- Manejo de sesiones
+
+###  Publicación de servicios
+- Creación de publicaciones con:
+  - Nombre
+  - Descripción
+  - Precio
+  - Imágenes
+  - Ubicación general (colonia/municipio)
+
+###  Sistema de propuestas
+- Los trabajadores pueden enviar propuestas a publicaciones
+- El empleador puede aceptar o rechazar propuestas
+
+###  Sistema de mensajería
+- Comunicación entre usuario y trabajador antes de aceptar una propuesta
+
+###  Evaluación
+- Calificación de usuarios después de completar el trabajo
+
+###  Sistema de reportes
+- Reporte de usuarios o problemas dentro de la plataforma
+
+###  Panel de administrador
+- Visualización de actividad de usuarios
+- Gestión de reportes
+- Posibilidad de sancionar o dar de baja usuarios y publicaciones
+
+##  Demo
+
+http://chambitas.free.nf/inicio.php
+
+
+
+##  Estructura del proyecto
+
+(Ejemplo)
+- `/backend`
+- `/frontend`
+- `/database`
+- `/assets`
+
+##  Cómo ejecutar el proyecto
+
+1. Clonar el repositorio
+2. Importar la base de datos en MySQL
+3. Configurar conexión en PHP
+4. Ejecutar en servidor local (XAMPP)
+
+---
+
+## 💡 Autor
+
+Carlos Daniel Cárdena Castejón
